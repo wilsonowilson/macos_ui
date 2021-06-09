@@ -9,6 +9,7 @@ import 'package:macos_ui/macos_ui.dart';
 import 'package:macos_ui/src/library.dart';
 import 'package:provider/provider.dart';
 
+import 'pages/tab_view.dart';
 import 'theme.dart';
 
 void main() {
@@ -56,7 +57,7 @@ class _DemoState extends State<Demo> {
     IndicatorsPage(),
     FieldsPage(),
     ColorsPage(),
-    Text('Disclosure item 2'),
+    TabViewPage(),
     Text('Disclosure item 3'),
     DialogsPage(),
   ];
@@ -109,12 +110,12 @@ class _DemoState extends State<Demo> {
                 label: Text('Disclosure'),
                 disclosureItems: [
                   SidebarItem(
-                    leading: Icon(CupertinoIcons.infinite),
+                    leading: Icon(CupertinoIcons.color_filter),
                     label: Text('Colors'),
                   ),
                   SidebarItem(
-                    leading: Icon(CupertinoIcons.heart),
-                    label: Text('Item 2'),
+                    leading: Icon(CupertinoIcons.table),
+                    label: Text('TabView'),
                   ),
                   SidebarItem(
                     leading: Icon(CupertinoIcons.infinite),
