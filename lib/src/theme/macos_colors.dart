@@ -168,7 +168,11 @@ class MacosColors {
   static const unemphasizedSelectedContentBackgroundColor =
       MacosColor(0xff464646);
 
-  static const alternatingContentBackgroundColor = MacosColor(0xff2e2c31);
+  static const alternatingContentBackgroundColor =
+      CupertinoDynamicColor.withBrightness(
+    color: MacosColor(0xffF4F5F5),
+    darkColor: MacosColor(0xff2e2c31),
+  );
 
   /// The color of a find indicator.
   ///

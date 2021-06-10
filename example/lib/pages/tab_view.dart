@@ -13,6 +13,11 @@ class _TabViewPageState extends State<TabViewPage> {
 
   @override
   Widget build(BuildContext context) {
+    final button = MacosIconButton(
+      icon: Icon(CupertinoIcons.clear),
+      onPressed: () {},
+      backgroundColor: MacosColors.transparent,
+    );
     return TabView(
       selected: page,
       onChanged: (i) => setState(() => page = i),
@@ -26,9 +31,9 @@ class _TabViewPageState extends State<TabViewPage> {
         ][page],
       ),
       tabs: [
-        Tab(content: Text('Sound Effects')),
-        Tab(content: Text('Output')),
-        Tab(content: Text('Input')),
+        Tab(leading: button, content: Text('Sound Effects')),
+        Tab(leading: button, content: Text('Output')),
+        Tab(leading: button, content: Text('Input')),
       ],
     );
   }
